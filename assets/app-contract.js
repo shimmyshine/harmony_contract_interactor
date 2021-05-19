@@ -277,6 +277,7 @@ addressForm.submit(function (e) {
     //prevent the form from actually submitting.
     e.preventDefault();
 
+    $('#functionToUse').empty().append('<option value="null">Select a function</option>');
     contractAddress = $('#address').val();
     contractABIToUse = JSON.parse($('#abi-to-use').val());
     console.log(contractABIToUse);
