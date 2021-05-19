@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>TokenJenny.ONE</title>
+    </head>
+    <body>
+        <div id="mm">
+            <div id="metamask-locked">
+                <span class="metamask-text">Metamask Locked</span>
+            </div>
+            <div id="metamask-unlocked">
+                <span class="metamask-text">Metamask Unlocked</span>
+            </div>
+            <p class="content" id="metamask-status"></p>
+            <!--When you are connected to mainnet-->
+            <p class="content hide" id="current-address" align="center"></p>
+            <p class="content hide" id="current-network" align="center"></p>
+        </div>
+        <form id="address-form">
+            <div class="form-group">
+                If the asset contract was created on TokenJenny, it will find it and display it's accessible functions for interaction.<br /><br />
+                <input type="text" class="form-control" id="address" placeholder="Contract Address" required>
+            </div>
+            <div class="form-group">
+                <textarea id="abi-to-use"></textarea>
+            </div>
+            <div class="form-group">
+                <button align="center" class="submit-button btn btn-primary" id="submit-btn" type="submit">Access Contract
+                </button>
+            </div>
+        </form>
+        <p id="functionsField"></p>
+        <div style="display: none;" id="interactionField" align='center'>
+            <center>
+                <hr><br />
+                <b>Please select a function.  You can change this however many times without reloading the contract ABI.</b><br /><br />
+                <select id='functionToUse'>
+                    <option value='null'>Select a function</option>
+                </select>
+                <br /><br /><hr>
+            </center>
+        </div>
+        <div id="functionEntryData">
+            <form id="functionEntryForm">
+
+            </form>
+        </div>
+        <p id="statusField"></p>
+        
+        <script src="./assets/jquery-3.3.1.min.js" type="application/javascript"></script>
+        <!--Core-->
+        <script src="./assets/app-contract.js" type="module"></script>
+    </body>
+</html>
