@@ -4,48 +4,64 @@
         <meta charset="UTF-8">
         <title>Harmony Contract Interactor</title>
     </head>
-    <body>
-        <div id="mm">
-            <div id="metamask-locked">
-                <span class="metamask-text">Metamask Locked</span>
+    <body style="background-color: rgb(56, 56, 56);">
+        <div id="header" style="font-weight: bold; font-size: 52px; text-align: center; color: white;">
+            Harmony Contract Interactor
+        </div>
+        <div id="mm" style="text-align: center;">
+            <div id="metamask-locked" style="display: none;">
+                <span class="metamask-text" style="color: green;">Metamask Locked</span>
             </div>
-            <div id="metamask-unlocked">
-                <span class="metamask-text">Metamask Unlocked</span>
+            <div id="metamask-unlocked" style="display: none;">
+                <span class="metamask-text" style="color: green;">Metamask Unlocked</span>
             </div>
-            <p class="content" id="metamask-status"></p>
+            <p class="content" id="metamask-status" style="color: white;"></p>
             <!--When you are connected to mainnet-->
-            <p class="content hide" id="current-address" align="center"></p>
-            <p class="content hide" id="current-network" align="center"></p>
+            <p class="content hide" id="current-address" style="color: white;"></p>
+            <p class="content hide" id="current-network" style="color: white;"></p>
         </div>
         <form id="address-form">
-            <div class="form-group">
-                <input type="text" class="form-control" id="address" placeholder="Contract Address" required>
+            <div class="form-group" style="text-align: center; padding: 20px 20px 10px 20px;">
+                <input type="text" class="form-control" style="text-align: center; width: 500px;" id="address" placeholder="Contract Address" required>
             </div>
-            <div class="form-group">
-                <textarea id="abi-to-use"></textarea>
+            <div class="form-grou" style="text-align: center; padding: 10px 0px 10px 0px;">
+                <div style="color: white; width: 48%; text-align: right; border-right: 1px solid white; float: left; padding-right: 20px; margin: 0px;">
+                    Preloaded ABIs<br />
+                    <select style="width: 300px;">
+                        <option value="standard">Standard</option>
+                        <option value="tj_hardcap">TokenJenny HardCap</option>
+                        <option value="tj_mintable">TokenJenny Mintable</option>
+                    </select>
+                </div>
+                <div style="color: white; width: 48%; text-align: left; float: left; padding-left: 20px; margin: 0px;">
+                    Save ABI<br />
+                    <input type="text" name="save_abi_name" style="width: 300px;">
+                </div>
+                <div style="clear: both; height: 0px;">&nbsp;</div>
             </div>
-            <div class="form-group">
-                <button align="center" class="submit-button btn btn-primary" id="submit-btn" type="submit">Access Contract
+            <div class="form-group" style="text-align: center; padding: 10px 20px 20px 20px;">
+                <textarea id="abi-to-use" placeholder="ABI [ to ], no quotes on the outside" rows="20" cols="100" required></textarea>
+            </div>
+            <div class="form-group" style="text-align: center;">
+                <button id="submit-btn" type="submit" style="text-align: center; border-radius: 8px; padding: 14px 40px; font-size: 16px; background-color: #008CBA; border: none; text-decoration: none; display: inline-block;">Access Contract
                 </button>
             </div>
         </form>
         <p id="functionsField"></p>
-        <div style="display: none;" id="interactionField" align='center'>
-            <center>
-                <hr><br />
-                <b>Please select a function.  You can change this however many times without reloading the contract ABI.</b><br /><br />
-                <select id='functionToUse'>
-                    <option value='null'>Select a function</option>
-                </select>
-                <br /><br /><hr>
-            </center>
+        <div style="display: none; text-align: center;" id="interactionField">
+            <hr><br />
+            <b style="color: white;">Please select a function.  You can change this however many times without reloading the contract ABI.</b><br /><br />
+            <select id='functionToUse'>
+                <option value='null'>Select a function</option>
+            </select>
+            <br /><br /><hr>
         </div>
-        <div id="functionEntryData">
-            <form id="functionEntryForm">
+        <div id="functionEntryData" style="width: 100%;">
+            <form id="functionEntryForm" style="text-align: center;">
 
             </form>
         </div>
-        <p id="statusField"></p>
+        <p id="statusField" style="color: white;"></p>
         
         <script src="./assets/jquery-3.3.1.min.js" type="application/javascript"></script>
         <!--Core-->

@@ -96,37 +96,37 @@ function start() {
                 networkInHouse['networkId'] = networkId;
                 networkInHouse['explorerToken'] = 'https://etherscan.io/token/';
                 networkInHouse['explorerTx'] = 'https://etherscan.io/tx/';
-                currentNetwork.html('You are currently connected to the <b style="color: red;">' + networkInHouse['name'] + ' (ID: ' + networkInHouse['networkId'] + ')</b>.').show();
+                currentNetwork.html('You are currently connected to the <b style="color: red;">' + networkInHouse['name'] + ' (ID: ' + networkInHouse['networkId'] + ')</b>').show();
             } else if (networkId === '3') {
                 networkInHouse['name'] = 'Ethereum Ropsten testnet';
                 networkInHouse['networkId'] = networkId;
                 networkInHouse['explorerToken'] = 'https://ropsten.etherscan.io/token/';
                 networkInHouse['explorerTx'] = 'https://ropsten.etherscan.io/tx/';
-                currentNetwork.html('You are currently connected to the <b style="color: red;">' + networkInHouse['name'] + ' (ID: ' + networkInHouse['networkId'] + ')</b>.').show();
+                currentNetwork.html('You are currently connected to the <b style="color: red;">' + networkInHouse['name'] + ' (ID: ' + networkInHouse['networkId'] + ')</b>').show();
             } else if (networkId === '4') {
                 networkInHouse['name'] = 'Ethereum Rinkeby testnet';
                 networkInHouse['networkId'] = networkId;
                 networkInHouse['explorerToken'] = 'https://rinkeby.etherscan.io/token/';
                 networkInHouse['explorerTx'] = 'https://rinkeby.etherscan.io/tx/';
-                currentNetwork.html('You are currently connected to the <b style="color: red;">' + networkInHouse['name'] + ' (ID: ' + networkInHouse['networkId'] + ')</b>.').show();
+                currentNetwork.html('You are currently connected to the <b style="color: red;">' + networkInHouse['name'] + ' (ID: ' + networkInHouse['networkId'] + ')</b>').show();
             } else if (networkId === '5') {
                 networkInHouse['name'] = 'Ethereum Goerli testnet';
                 networkInHouse['networkId'] = networkId;
                 networkInHouse['explorerToken'] = 'https://goerli.etherscan.io/token/';
                 networkInHouse['explorerTx'] = 'https://goerli.etherscan.io/tx/';
-                currentNetwork.html('You are currently connected to the <b style="color: red;">' + networkInHouse['name'] + ' (ID: ' + networkInHouse['networkId'] + ')</b>.').show();
+                currentNetwork.html('You are currently connected to the <b style="color: red;">' + networkInHouse['name'] + ' (ID: ' + networkInHouse['networkId'] + ')</b>').show();
             } else if (networkId === '0x63564c40') {
                 networkInHouse['name'] = 'Harmony Mainnet';
                 networkInHouse['networkId'] = networkId;
                 networkInHouse['explorerToken'] = 'https://explorer.harmony.one/#/address/';
                 networkInHouse['explorerTx'] = 'https://explorer.harmony.one/#/tx/';
-                currentNetwork.html('You are currently connected to the <b style="color: red;">' + networkInHouse['name'] + ' (ID: ' + networkInHouse['networkId'] + ')</b>.').show();
+                currentNetwork.html('You are currently connected to the <b style="color: red;">' + networkInHouse['name'] + ' (ID: ' + networkInHouse['networkId'] + ')</b>').show();
             } else if (networkId === '0x6357d2e0') {
                 networkInHouse['name'] = 'Harmony Testnet';
                 networkInHouse['networkId'] = networkId;
                 networkInHouse['explorerToken'] = 'https://explorer.pops.one/#/address/';
                 networkInHouse['explorerTx'] = 'https://explorer.pops.one/#/tx/';
-                currentNetwork.html('You are currently connected to the <b style="color: red;">' + networkInHouse['name'] + ' (ID: ' + networkInHouse['networkId'] + ')</b>.').show();
+                currentNetwork.html('You are currently connected to the <b style="color: red;">' + networkInHouse['name'] + ' (ID: ' + networkInHouse['networkId'] + ')</b>').show();
             } else {
                 networkInHouse['name'] = 'none';
                 networkInHouse['networkId'] = networkId;
@@ -166,7 +166,7 @@ function start() {
                 }
             })
             .then(function (balance) {
-                accountAddress.html('<strong>Selected Account: ' + address + ' (' + balance + ' ONE)</strong>').show();
+                accountAddress.html('<strong>Selected Account: ' + address + '<br /><br />(' + balance + ' ONE)</strong>').show();
             })
             .fail(function (err) {
                 if (err.message !== "Metamask Locked")
@@ -337,6 +337,7 @@ $(function () {
                 addEle.type = "text";
                 addEle.name = contractABIToUse[selectedID].inputs[i]['name'];
                 addEle.classList.add("form-control");
+                addEle.style = "text-align: center; width: 500px; margin: 5px;";
                 addEle.id = contractABIToUse[selectedID].inputs[i]['name'];
                 addEle.placeholder = contractABIToUse[selectedID].inputs[i]['name']+"     -     Type: " + contractABIToUse[selectedID].inputs[i]['type'];
                 addEle.required = true;
@@ -347,7 +348,7 @@ $(function () {
         } else {
             var addDiv = document.createElement('div');
             addDiv.classList.add("form-group");
-            addDiv.innerHTML = "<center>This function requires no inputs.  You may hit \"Execute Function\" to query.<center>";
+            addDiv.innerHTML = "This function requires no inputs.  You may hit \"Execute Function\" to query.<br /><br />";
 
             functionEntryForm.appendChild(addDiv);
         }
@@ -357,9 +358,7 @@ $(function () {
         addDiv.class = "form-group";
         var addEle = document.createElement('button');
         addEle.align = "center";
-        addEle.classList.add("submit-button");
-        addEle.classList.add("btn");
-        addEle.classList.add("btn-primary");
+        addEle.style = "text-align: center; border-radius: 8px; padding: 14px 40px; font-size: 16px; background-color: #008CBA; border: none; text-decoration: none; display: inline-block; margin-top: 15px;"
         addEle.id = "submit-btn";
         addEle.type = "submit";
         addEle.innerHTML = "Execute Function";
