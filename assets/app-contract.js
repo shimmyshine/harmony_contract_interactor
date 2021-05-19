@@ -310,6 +310,18 @@ addressForm.submit(function (e) {
 });
 
 $(function () {
+    $("#preloaded_contracts").change(function() {
+        var selectedName = $(this).val();
+        
+        var arrayAssoc = { "hrc20_standard": hrc20_standard_abi, "tj_mintable": tj_mintable_abi, "tj_hardcap": tj_hardcap_abi };
+
+        //console.log(arrayAssoc[selectedName]);
+
+        document.getElementById("abi-to-use").value = JSON.stringify(arrayAssoc[selectedName]);
+    });
+});
+
+$(function () {
     $("#functionToUse").change(function() {
         statusField.innerHTML = '<p align="center">Awaiting function execution</p>';
 

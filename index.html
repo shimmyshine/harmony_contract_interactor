@@ -27,8 +27,8 @@
             <div class="form-grou" style="text-align: center; padding: 10px 0px 10px 0px;">
                 <div style="color: white; width: 48%; text-align: right; border-right: 1px solid white; float: left; padding-right: 20px; margin: 0px;">
                     Preloaded ABIs<br />
-                    <select style="width: 300px;">
-                        <option value="standard">Standard</option>
+                    <select style="width: 300px;" id="preloaded_contracts">
+                        <option value="hrc20_standard">HRC20 Standard</option>
                         <option value="tj_hardcap">TokenJenny HardCap</option>
                         <option value="tj_mintable">TokenJenny Mintable</option>
                     </select>
@@ -50,21 +50,21 @@
         <p id="functionsField"></p>
         <div style="display: none; text-align: center;" id="interactionField">
             <hr><br />
-            <b style="color: white;">Please select a function.  You can change this however many times without reloading the contract ABI.</b><br /><br />
+            <b style="color: white;">Please select a function.  You can change this however many times without reloading the contract ABI.<br /><br />If you change the ABI however, you must refresh the page.</b><br /><br />
             <select id='functionToUse'>
                 <option value='null'>Select a function</option>
             </select>
             <br /><br /><hr>
         </div>
         <div id="functionEntryData" style="width: 100%;">
-            <form id="functionEntryForm" style="text-align: center;">
+            <form id="functionEntryForm" style="text-align: center; color: white;">
 
             </form>
         </div>
         <p id="statusField" style="color: white;"></p>
         
         <script src="./assets/jquery-3.3.1.min.js" type="application/javascript"></script>
-        <!--Core-->
+        <script src="./assets/abi-preloads.js" type="application/javascript"></script>
         <script src="./assets/app-contract.js" type="module"></script>
     </body>
 </html>
