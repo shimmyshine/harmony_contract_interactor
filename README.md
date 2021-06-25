@@ -6,7 +6,9 @@ Preloaded contracts:
  - Standard HRC20
  - TokenJenny.ONE HardCap
  - TokenJenny.ONE Mintable
+ - TokenJenny.ONE MoonCoin
  - Ript.IO Token Creator
+ - TokenJenny Gem Mine
 
 Available here: https://shimmyshine.github.io/harmony_contract_interactor/
 
