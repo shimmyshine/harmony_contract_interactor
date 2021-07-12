@@ -256,7 +256,7 @@ functionEntryForm.submit(function (e) {
     submittalArray.pop();
 
     var tokenContract = new ethers.Contract(contractAddress, contractABIToUse, signer);
-    tokenContract[methodToUse](...submittalArray).then(function(result) {
+    tokenContract[methodToUse](...submittalArray, {gasPrice: 2000000000}).then(function(result) {
         console.log(result);
         if(typeof result === 'object' && typeof result.value === 'object') {
             statusField.innerHTML = "<p align=\"center\" style=\"color: green\">Successfully Executed<br /><br />Returned Value (may not hold any pertinent information):<br /><br />" + result.value + "</p>";
