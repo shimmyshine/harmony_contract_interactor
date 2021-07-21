@@ -314,7 +314,7 @@ $(function () {
     $("#preloaded_contracts").change(function() {
         var selectedName = $(this).val();
         
-        var arrayAssoc = { "hrc20_standard": hrc20_standard_abi, "tj_mintable": tj_mintable_abi, "tj_hardcap": tj_hardcap_abi, "ript_io_token_creator": ript_io_token_creator_abi, "onchainmining": onchainmining_abi, "tj_mooncoin": mooncoin_abi, "viperswap_masterbreeder": viperswap_masterbreeder, "tj_hardcap_pausable": tj_hardcap_pausable_abi, "tj_mintable_pausable": tj_mintable_pausable_abi };
+        var arrayAssoc = { "hrc20_standard": hrc20_standard_abi, "tj_mintable": tj_mintable_abi, "tj_hardcap": tj_hardcap_abi, "ript_io_token_creator": ript_io_token_creator_abi, "onchainmining": onchainmining_abi, "tj_mooncoin": mooncoin_abi, "viperswap_masterbreeder": viperswap_masterbreeder, "tj_hardcap_pausable": tj_hardcap_pausable_abi, "tj_mintable_pausable": tj_mintable_pausable_abi, "tj_hardcap_holders": tj_hardcap_holders_abi };
 
         //console.log(arrayAssoc[selectedName]);
 
