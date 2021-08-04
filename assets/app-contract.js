@@ -314,7 +314,7 @@ $(function () {
     $("#preloaded_contracts").change(function() {
         var selectedName = $(this).val();
         
-        var arrayAssoc = { "hrc20_standard": hrc20_standard_abi, "tj_mintable": tj_mintable_abi, "tj_hardcap": tj_hardcap_abi, "ript_io_token_creator": ript_io_token_creator_abi, "onchainmining": onchainmining_abi, "tj_mooncoin": mooncoin_abi, "viperswap_masterbreeder": viperswap_masterbreeder, "tj_hardcap_pausable": tj_hardcap_pausable_abi, "tj_mintable_pausable": tj_mintable_pausable_abi, "tj_hardcap_holders": tj_hardcap_holders_abi, "tj_mintable_holders": tj_mintable_holders_abi, "tj_permissions": tj_permissions_abi, "tj_mine_tracker": tj_mine_tracker_abi, "tj_token_tracker": tj_token_tracker_abi };
+        var arrayAssoc = { "hrc20_standard": hrc20_standard_abi, "tj_mintable": tj_mintable_abi, "tj_hardcap": tj_hardcap_abi, "ript_io_token_creator": ript_io_token_creator_abi, "onchainmining": onchainmining_abi, "tj_mooncoin": mooncoin_abi, "viperswap_masterbreeder": viperswap_masterbreeder, "tj_hardcap_pausable": tj_hardcap_pausable_abi, "tj_mintable_pausable": tj_mintable_pausable_abi, "tj_hardcap_holders": tj_hardcap_holders_abi, "tj_mintable_holders": tj_mintable_holders_abi, "tj_permissions": tj_permissions_abi, "tj_mine_tracker": tj_mine_tracker_abi, "tj_token_tracker": tj_token_tracker_abi, "poolparty": poolparty_abi };
 
         //console.log(arrayAssoc[selectedName]);
 
