@@ -96,43 +96,43 @@ function start() {
                 networkInHouse['networkId'] = networkId;
                 networkInHouse['explorerToken'] = 'https://etherscan.io/token/';
                 networkInHouse['explorerTx'] = 'https://etherscan.io/tx/';
-                currentNetwork.html('You are currently connected to the <b style="color: red;">' + networkInHouse['name'] + ' (ID: ' + networkInHouse['networkId'] + ')</b>').show();
+                currentNetwork.html('You are currently connected to the ' + networkInHouse['name'] + ' (ID: ' + networkInHouse['networkId'] + ')').show();
             } else if (networkId === '3') {
                 networkInHouse['name'] = 'Ethereum Ropsten testnet';
                 networkInHouse['networkId'] = networkId;
                 networkInHouse['explorerToken'] = 'https://ropsten.etherscan.io/token/';
                 networkInHouse['explorerTx'] = 'https://ropsten.etherscan.io/tx/';
-                currentNetwork.html('You are currently connected to the <b style="color: red;">' + networkInHouse['name'] + ' (ID: ' + networkInHouse['networkId'] + ')</b>').show();
+                currentNetwork.html('You are currently connected to the ' + networkInHouse['name'] + ' (ID: ' + networkInHouse['networkId'] + ')').show();
             } else if (networkId === '4') {
                 networkInHouse['name'] = 'Ethereum Rinkeby testnet';
                 networkInHouse['networkId'] = networkId;
                 networkInHouse['explorerToken'] = 'https://rinkeby.etherscan.io/token/';
                 networkInHouse['explorerTx'] = 'https://rinkeby.etherscan.io/tx/';
-                currentNetwork.html('You are currently connected to the <b style="color: red;">' + networkInHouse['name'] + ' (ID: ' + networkInHouse['networkId'] + ')</b>').show();
+                currentNetwork.html('You are currently connected to the ' + networkInHouse['name'] + ' (ID: ' + networkInHouse['networkId'] + ')').show();
             } else if (networkId === '5') {
                 networkInHouse['name'] = 'Ethereum Goerli testnet';
                 networkInHouse['networkId'] = networkId;
                 networkInHouse['explorerToken'] = 'https://goerli.etherscan.io/token/';
                 networkInHouse['explorerTx'] = 'https://goerli.etherscan.io/tx/';
-                currentNetwork.html('You are currently connected to the <b style="color: red;">' + networkInHouse['name'] + ' (ID: ' + networkInHouse['networkId'] + ')</b>').show();
+                currentNetwork.html('You are currently connected to the ' + networkInHouse['name'] + ' (ID: ' + networkInHouse['networkId'] + ')').show();
             } else if (networkId === '0x63564c40') {
                 networkInHouse['name'] = 'Harmony Mainnet';
                 networkInHouse['networkId'] = networkId;
                 networkInHouse['explorerToken'] = 'https://explorer.harmony.one/#/address/';
                 networkInHouse['explorerTx'] = 'https://explorer.harmony.one/#/tx/';
-                currentNetwork.html('You are currently connected to the <b style="color: red;">' + networkInHouse['name'] + ' (ID: ' + networkInHouse['networkId'] + ')</b>').show();
+                currentNetwork.html('You are currently connected to the ' + networkInHouse['name'] + ' (ID: ' + networkInHouse['networkId'] + ')').show();
             } else if (networkId === '0x6357d2e0') {
                 networkInHouse['name'] = 'Harmony Testnet';
                 networkInHouse['networkId'] = networkId;
                 networkInHouse['explorerToken'] = 'https://explorer.pops.one/#/address/';
                 networkInHouse['explorerTx'] = 'https://explorer.pops.one/#/tx/';
-                currentNetwork.html('You are currently connected to the <b style="color: red;">' + networkInHouse['name'] + ' (ID: ' + networkInHouse['networkId'] + ')</b>').show();
+                currentNetwork.html('You are currently connected to the ' + networkInHouse['name'] + ' (ID: ' + networkInHouse['networkId'] + ')').show();
             } else {
                 networkInHouse['name'] = 'none';
                 networkInHouse['networkId'] = networkId;
                 networkInHouse['explorerToken'] = '';
                 networkInHouse['explorerTx'] = '';
-                currentNetwork.text('Your current network id is <b style="color: red;">(' + networkId + ')</b>.  If this is showing random numbers, please contact us.').show();
+                currentNetwork.text('Your current network id is (' + networkId + ').  If this is showing random numbers, please contact us.').show();
             }
         })
         .fail(function (err) {
